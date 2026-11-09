@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Globe Ace Cargo | Pet Journey Tracking</title>
+<meta name="description" content="Track your pet's transport journey with Globe Ace Cargo. Shipment updates, customer support and refund enquiries.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#"><span class="logo">G</span><span>GLOBE ACE <small>CARGO</small></span></a><nav><a href="#track">Track shipment</a><a href="#services">Services</a><a href="#contact">Contact</a></nav><button class="ghost" id="adminOpen">Admin sign in</button><button class="hamb" id="hamb">☰</button></header>
+<main>
+<section class="hero"><div><div class="eyebrow">PET TRANSPORT • CUSTOMER TRACKING</div><h1>Every pet's journey,<br><em>closer to home.</em></h1><p>Enter your shipment reference to view recorded progress, journey milestones and the latest location update supplied by our transport team.</p><a class="btn" href="#track">Track a shipment&nbsp; →</a><div class="trust">✓ Shipment milestones &nbsp;&nbsp; ✓ Customer support &nbsp;&nbsp;</div></div><div class="hero-art"><div class="hero-bubble">♡ <span><b>Care at every mile</b><small>Pet-first journey updates</small></span></div></div></section>
+<section class="section" id="track"><div class="eyebrow">TRACKING PORTAL</div><h2>Where is your pet?</h2><p class="muted">Use the tracking code provided by our team. Tracking information is only as current as the latest verified update.</p>
+<div class="searchbox"><label for="code">TRACKING NUMBER</label><div class="searchrow"><input id="code" placeholder="Enter your tracking number e.g. GAC-26001"><button class="btn" id="search">Find shipment →</button></div><small>Demo reference: <b>GAC-DEMO-001</b>. This is sample data, not a real shipment.</small></div>
+<div id="shipment" class="shipment hidden" aria-live="polite"></div>
+</section>
+<section class="section soft" id="services"><div class="eyebrow">CUSTOMER SERVICES</div><h2>Support through every step</h2><div class="cards"><article><i>⌖</i><h3>Journey updates</h3><p>View the last recorded shipment status, route milestones and estimated arrival supplied by authorised staff.</p></article><article><i>♡</i><h3>Pet travel support</h3><p>Ask our team about travel arrangements, documents and your pet's transport details.</p></article></div></section>
+<section class="section contact" id="contact"><div><div class="eyebrow">WE'RE HERE TO HELP</div><h2>Need assistance?</h2><p class="muted">Contact the agency using the verified business contact details supplied by its administrator.</p></div><div class="contactbox"><span>BUSINESS EMAIL</span><b id="emailDisplay">Configure your support email</b><span>LIVE CHAT</span><b>Smartsupp integration — setup required</b><span>WEBMAIL</span><b>Use your email provider's official webmail address</b></div></section>
+</main><footer><div class="brand"><span class="logo">G</span><span>GLOBE ACE <small>CARGO</small></span></div><span>© <span id="year"></span> Globe Ace Cargo</span><span>Transparent updates. Responsible pet transport.</span></footer>
+<div class="modal hidden" id="adminModal"><div class="modalbox"><button class="x" id="close">×</button><div class="eyebrow">STAFF AREA</div><h2>Admin access</h2><p>This deployment preview has no real admin authentication. A secure backend and staff accounts must be configured before using it with customers.</p><label>Demo tracking code<input id="newCode" placeholder="GAC-26002"></label><label>Pet / shipment description<input id="newPet" placeholder="Pet name and breed"></label><label>Current status<select id="newStatus"><option>Booking received</option><option>Preparing for dispatch</option><option>In transit</option><option>Arrived at destination hub</option><option>Delivered</option></select></label><label>Last recorded location<input id="newLocation" placeholder="City / transport hub"></label><label>Estimated arrival<input id="newEta" placeholder="e.g. 18 November 2026"></label><button class="btn full" id="saveDemo">Save demo shipment to this browser</button><p class="tiny">Demo records are stored only in this browser. They do not update a shared customer database or provide real GPS tracking.</p><div id="adminMsg" class="notice"></div></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script src="app.js"></script>
+</body></html>
